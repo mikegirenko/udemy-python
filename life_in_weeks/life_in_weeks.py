@@ -11,5 +11,12 @@ def life_in_weeks():
     print(f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left.")
 
 
+def calculate_days_left():
+    your_current_age = 50
+    days_left = (90 - your_current_age) * 365
+
+    return days_left
+
+
 if __name__ == "__main__":
     life_in_weeks()
