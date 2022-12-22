@@ -8,6 +8,7 @@ class OddOrEven:
             odd_or_even = "odd number"
 
         return odd_or_even
+# TODO add exception handling
 
 
 if __name__ == "__main__":
