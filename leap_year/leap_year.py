@@ -12,8 +12,14 @@ class LeapYear:
 
         return year
 
-    def leap_year_or_not(self):
+    def leap_year_or_not(self):  # this should return true/false
         pass
+
+    def print_output(self, leap_flag):  # this should have logic to print Leap year or Not leap year
+        if leap_flag:
+            print("Leap year")
+        else:
+            print("Not a leap year")
 
 
 if __name__ == "__main__":
