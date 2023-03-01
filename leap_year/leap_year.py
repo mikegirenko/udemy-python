@@ -1,5 +1,5 @@
 """
-read then write pseudocode (english words instead of code)
+pseudocode (english words instead of code)
 1. take user input
 2. determine if leap year or not
 3. print formatted output to user
@@ -10,18 +10,27 @@ class LeapYear:
     def user_input(self) -> int:
         year = input("Which year do you want to check? ")
 
-        return year
+        return int(year)
 
-    def leap_year_or_not(self):  # this should return true/false
-        pass
+    def leap_year_or_not(self, year_to_check) -> bool:
+        leap = False
+        if year_to_check % 4 != 0:
+            leap = False
+        if year_to_check % 4 == 0:
+            if year_to_check % 100 != 0 or year_to_check % 400 == 0:
+                leap = True
 
-    def print_output(self, leap_flag):  # this should have logic to print Leap year or Not leap year
+        return leap
+
+    def print_output(self, leap_flag):
         if leap_flag:
-            print("Leap year")
+            print("Leap year.")
         else:
-            print("Not a leap year")
+            print("Not a leap year.")
 
 
 if __name__ == "__main__":
     obj = LeapYear()
-    obj.user_input()
+    year = obj.user_input()
+    flag = obj.leap_year_or_not(year)
+    obj.print_output(flag)
