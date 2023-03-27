@@ -18,7 +18,7 @@ class LoveScore:
     #     letter_counter = 0
     #     names_to_check = name_one + name_two
     #     for letter in word_to_use.lower():
-    #         if letter in names_to_check:  # it counts letter only once!!!
+    #         if letter in names_to_check:
     #             letter_counter += 1
     #     return letter_counter
 
