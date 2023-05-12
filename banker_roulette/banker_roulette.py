@@ -19,4 +19,4 @@ class BankerRoulette:
 if __name__ == "__main__":
     obj = BankerRoulette()
     person_paying = obj.select_name(NAMES_STRING)
-    print(f"{person_paying} is going to pay the meal today!")
+    print(f"{person_paying} is going to buy the meal today!")
