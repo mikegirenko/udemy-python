@@ -13,9 +13,18 @@ class TreasureMap:
         return spot_to_mark
 
     def mark_a_spot(self, spot_to_mark) -> list:
-        column = spot_to_mark[0]
-        row = spot_to_mark[1]
-        self.treasure_map[int(row) - 1][int(column) - 1] = "x"
+        column = int(spot_to_mark[0])
+        row = int(spot_to_mark[1])
+        if row == 0:
+            row = 0
+        else:
+            row = row - 1
+        if column == 0:
+            column = 0
+        else:
+            column == column - 1
+
+        self.treasure_map[row][column] = "x"
 
         return self.treasure_map
 
