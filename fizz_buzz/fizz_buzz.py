@@ -8,6 +8,9 @@ If number divisible by 3 and 5 (e.g. 15), print FizzBuzz
 
 
 class FizzBuzz:
+    def __init__(self):
+        self.some_variable = None  # can do _ to make it private variable
+
     def play_fizz_buzz(self):
         for i in range(1, 101):
             if i % 3 != 0 and i % 5 != 0:
@@ -23,3 +26,4 @@ class FizzBuzz:
 if __name__ == "__main__":
     obj = FizzBuzz()
     obj.play_fizz_buzz()
+    print("Class variable is", obj.some_variable)
