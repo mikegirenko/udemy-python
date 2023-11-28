@@ -17,9 +17,10 @@ class Hangman:
             display.append("_")
         print("Initial display", display)
 
-        for letter in self.chosen_word:
+        for position in range(len(self.chosen_word)):
+            letter = self.chosen_word[position]
             if letter == self.guess:
-                display[self.chosen_word.index(self.guess)] = letter
+                display[position] = letter
             else:
                 print("Wrong")
 
