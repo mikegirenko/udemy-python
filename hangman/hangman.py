@@ -22,14 +22,16 @@ class Hangman:
             guess = input("Guess a letter: ").lower()
             for position in range(len(self.chosen_word)):
                 letter = self.chosen_word[position]
+                letter_found = False
                 if letter == guess:
                     display[position] = letter
                     good_guess += 1
+                    letter_found = True
                     print("Updated display:", display)
                     if good_guess == len(self.chosen_word):
                         game_over = True
                         print("You won!")
-                if letter != guess: # TODO do not print if guess was correct
+                if letter != guess and letter_found is True:
                     print("You wrong")
 
 
